@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookStore</title>
+    <link rel="stylesheet" href="/CSS/Style.css" />
+    <link
+      rel="stylesheet"
+      href="/IMG/fontawesome-free-5.15.2-web/css/all.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <span href="Index.html" title="Главная" class="book">Book</span
+          ><span href="Index.html" title="Главная" class="store">Store</span>
+        </div>
+        <div class="search-box">
+          <input
+            type="text"
+            class="search-txt"
+            id="elastic"
+            placeholder="Поиск..."
+          />
+          <a href="#" class="search-btn"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="login-favorite-busket">
+          <ul class="login-favorite-busket-items">
+            <li>
+              <a class="btn" id="user">
+                <span class="icon"><i class="fas fa-user"></i></span>
+                <br />
+                <span>Войти</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn" id="favorites">
+                <span class="icon"><i class="fas fa-heart"></i></span>
+                <br />
+                <span>Избранное</span>
+              </a>
+            </li>
+            <li>
+              <a class="btn">
+                <p class="counter">
+                  <span id="busket-counter">0</span>
+                </p>
+                <span class="icon"><i class="fas fa-shopping-cart"></i></span>
+                <br />
+                <span>Корзина</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="line">
+        <nav>
+          <input type="checkbox" id="checkbox-menu" />
+          <label for="checkbox-menu">
+            <ul class="menu tuch">
+              <li><a href="#">Каталог</a></li>
+              <li><a href="#">Акции</a></li>
+              <li><a href="#">Новинки</a></li>
+              <li><a href="#">Бестселлеры</a></li>
+              <li><a href="#">Лучшие цены</a></li>
+              <li><a href="#">Рекомендации</a></li>
+              <li><a href="#">Подарки</a></li>
+            </ul>
+            <span class="toggle"><i class="fas fa-bars"></i></span>
+          </label>
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="news">
+        <ul class="news-items">
+          <li class="news-items-in">
+            <img class="news-item" src="/IMG/news1.jpeg" alt="Новости" />
+          </li>
+          <!-- <li class="news-items-in"></li>
+          <li class="news-items-in"></li>
+          <li class="news-items-in"></li>
+          <li class="news-items-in"></li> -->
+        </ul>
+      </div>
+      <div class="shop-cards">
+        <div class="cards-name">Новиники</div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-cards">
+        <div class="cards-name">Бестселлеры</div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-cards">
+        <div class="cards-name">Рекомендации</div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="shop-item-box">
+          <div class="book-preview">
+            <img src="/IMG/book_preview.jpg" alt="Купить" />
+          </div>
+          <div class="item-info">
+            <a href="#" class="item-decription">
+              <div class="item-name">Название книги</div>
+              <div class="item-autor">Автор</div>
+            </a>
+            <div class="item-price-buy">
+              <div class="item-price">399р</div>
+              <button type="button" class="item-buy-btn" id="bt-buy" onclick="addItemToCart()">
+                Купить
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <ul class="footer-content-items">
+          <li>
+            <a class="media">Мы в соцсетях</a>
+            <div class="logo-footer">
+              <a><i class="fab fa-twitter"></i></a>
+              <a><i class="fab fa-facebook"></i></a>
+              <a><i class="fas fa-user-friends"></i></a>
+            </div>
+          </li>
+          <li>
+            <a class="payment">Принимаем к оплате</a>
+            <div class="logo-footer">
+              <a><i class="fab fa-cc-visa"></i></a>
+              <a><i class="fab fa-cc-mastercard"></i></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <link rel="stylesheet" href="/JS/scripts.js" />
+  </body>
+</html>
